@@ -1,11 +1,10 @@
 import * as React from 'react';
 import './style.css';
+import MyHeader from './Header';
+import Login from './Login';
+
+const isLogin = localStorage.getItem('isLogin');
 
 export default function App() {
-  return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
+  return <>{isLogin ? <MyHeader></MyHeader> : <Login></Login>}</>;
 }
