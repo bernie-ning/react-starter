@@ -1,7 +1,12 @@
 import * as React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { useNavigate, Outlet, Link } from 'react-router-dom';
 
 export default function Layout() {
+  const navigate = useNavigate();
+  const Logout = () => {
+    navigate('/Logout');
+  };
+
   return (
     <>
       <div>
@@ -18,7 +23,7 @@ export default function Layout() {
             </li>
           </ul>
         </nav>
-        <button>Logout</button>
+        <button onClick={Logout}>Logout</button>
       </div>
       <div>
         <Outlet />

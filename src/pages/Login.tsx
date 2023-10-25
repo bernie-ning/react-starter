@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [inputs, setInputs] = React.useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -11,7 +13,7 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(inputs.country);
+    navigate('/Home');
   };
 
   const login = () => {
