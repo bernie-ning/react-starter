@@ -6,7 +6,7 @@ export default function Layout() {
     <>
       <div>
         <nav>
-          <ul>
+          <ul className="list-unstyled list-inline">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -18,6 +18,7 @@ export default function Layout() {
             </li>
           </ul>
         </nav>
+        <button>Logout</button>
       </div>
       <div>
         <Outlet />
