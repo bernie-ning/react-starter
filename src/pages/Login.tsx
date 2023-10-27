@@ -25,10 +25,10 @@ function Login() {
       <div style={{ width: '100%' }}>
         <h3 className="text-center m-5">Login</h3>
         <div className="row mb-3" style={{ lineHeight: '38px' }}>
-          <label htmlFor="username" className="form-label col-3 text-end">
+          <label htmlFor="username" className="form-label col-4 text-end">
             User Name
           </label>
-          <div className="col-7">
+          <div className="col">
             <input
               className="form-control"
               type="text"
@@ -41,12 +41,12 @@ function Login() {
         <div className="row mb-3">
           <label
             htmlFor="inputPassword"
-            className="col-3 text-end"
+            className="col-4 text-end"
             style={{ lineHeight: '38px' }}
           >
             Password
           </label>
-          <div className="col-7">
+          <div className="col">
             <input
               type="password"
               name="inputPassword"
@@ -55,11 +55,21 @@ function Login() {
               className="form-control"
             />
           </div>
-          <div>
+        </div>
+        <div className="row mb-3">
+          <label
+            htmlFor="country"
+            className="col-4 text-end"
+            style={{ lineHeight: '38px' }}
+          >
+            Country
+          </label>
+          <div className="col">
             <select
               name="country"
               value={inputs.country}
               onChange={handleChange}
+              className="form-control"
             >
               <option value="">Please select</option>
               <option value="china">China</option>
@@ -68,7 +78,6 @@ function Login() {
             </select>
           </div>
         </div>
-
         <div className="row">
           <div className="col-3"></div>
           <div className="col-7">
