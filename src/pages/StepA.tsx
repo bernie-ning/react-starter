@@ -10,8 +10,10 @@ export default function StepA() {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(value);
-    setUser((values) => ({ ...values, [name]: value }));
+    console.log(event.target);
+    setUser((values) => {
+      return { ...values, [name]: value };
+    });
   };
 
   return (
@@ -26,13 +28,14 @@ export default function StepA() {
             value={user.name || ''}
             className="form-control"
             id="name"
+            name="name"
             onChange={handleChange}
           />
         </div>
       </div>
 
       <div className="mb-3 row">
-        <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
+        <label htmlFor="age" className="col-sm-2 col-form-label">
           Age
         </label>
         <div className="col-sm-10">
@@ -41,6 +44,7 @@ export default function StepA() {
             className="form-control"
             value={user.age || ''}
             id="inputPassword"
+            name="age"
             onChange={handleChange}
           />
         </div>
@@ -53,7 +57,7 @@ export default function StepA() {
           <input
             type="radio"
             className="form-check-inline"
-            value={user.gender}
+            value="man"
             id="man"
             name="gender"
             onChange={handleChange}
@@ -64,7 +68,7 @@ export default function StepA() {
           <input
             type="radio"
             className="form-check-inline"
-            value={user.gender}
+            value="female"
             id="female"
             name="gender"
             style={{ marginLeft: '25px' }}
