@@ -39,12 +39,12 @@ export default function Layout() {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/StepA">
-                    StepA
+                    UseState-Form
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/StepB">
-                    StepB
+                    UseEffect
                   </Link>
                 </li>
               </ul>

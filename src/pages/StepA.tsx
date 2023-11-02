@@ -79,7 +79,7 @@ export default function StepA() {
           </label>
         </div>
       </div>
-      <div className="row">
+      <div className="row" style={{ marginLeft: 10 }}>
         your input: {user.name} - {user.age} - {user.gender}
       </div>
     </>
