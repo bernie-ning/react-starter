@@ -10,10 +10,10 @@ export default function Layout() {
   return (
     <>
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-sm bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Navbar
+              React Practise
             </a>
             <button
               className="navbar-toggler"
@@ -38,16 +38,20 @@ export default function Layout() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/StepA">StepA</Link>
+                  <Link className="nav-link" to="/StepA">
+                    StepA
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/StepB">StepB</Link>
+                  <Link className="nav-link" to="/StepB">
+                    StepB
+                  </Link>
                 </li>
               </ul>
+              <button onClick={Logout}>Logout</button>
             </div>
           </div>
         </nav>
-        <button onClick={Logout}>Logout</button>
       </div>
 
       <div className="body">
