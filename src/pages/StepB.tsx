@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DropDownList from './DropDownList';
+import DropDownList from '../Compenonts/DropDownList';
 
 export default function StepB() {
   const cityData = [
