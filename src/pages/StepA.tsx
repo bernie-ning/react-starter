@@ -60,6 +60,7 @@ export default function StepA() {
             value="man"
             id="man"
             name="gender"
+            checked
             onChange={handleChange}
           />
           <label htmlFor="man" className="col-sm-2 col-form-label">
