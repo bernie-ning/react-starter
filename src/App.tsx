@@ -10,6 +10,7 @@ import StepA from './pages/StepA';
 import StepB from './pages/StepB';
 import NoPage from './pages/NoPage';
 import Login from './pages/Login';
+import UseRef from './pages/UseRef';
 
 export default function App() {
   return (
@@ -18,9 +19,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="StepA" element={<StepA />} />
-            <Route path="StepB" element={<StepB />} />
+            <Route path="Form" element={<StepA />} />
+            <Route path="DropDownList" element={<StepB />} />
             <Route path="*" element={<NoPage />} />
+            <Route path="UseRef" element={<UseRef />} />
           </Route>
           <Route path="Logout" element={<Login />} />
         </Routes>

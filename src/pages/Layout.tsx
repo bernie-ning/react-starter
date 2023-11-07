@@ -47,6 +47,11 @@ export default function Layout() {
                     UseEffect
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/UseRef">
+                    UseRef
+                  </Link>
+                </li>
               </ul>
               <button onClick={Logout}>Logout</button>
             </div>
