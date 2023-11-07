@@ -54,28 +54,28 @@ export default function StepA() {
           Gender
         </label>
         <div className="col-sm-10">
-          <input
-            type="radio"
-            className="form-check-inline"
-            value="man"
-            id="man"
-            name="gender"
-            checked
-            onChange={handleChange}
-          />
           <label htmlFor="man" className="col-sm-2 col-form-label">
+            <input
+              type="radio"
+              className="form-check-inline"
+              value="man"
+              name="gender"
+              onClick={handleChange}
+              checked={user.gender === 'man'}
+            />
             Man
           </label>
-          <input
-            type="radio"
-            className="form-check-inline"
-            value="female"
-            id="female"
-            name="gender"
-            style={{ marginLeft: '25px' }}
-            onChange={handleChange}
-          />
+
           <label htmlFor="female" className="col-sm-2 col-form-label">
+            <input
+              type="radio"
+              className="form-check-inline"
+              value="female"
+              name="gender"
+              style={{ marginLeft: '25px' }}
+              onClick={handleChange}
+              checked={user.gender === 'female'}
+            />
             Female
           </label>
         </div>
