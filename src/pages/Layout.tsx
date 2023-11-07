@@ -52,6 +52,11 @@ export default function Layout() {
                     UseRef
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/UseReducer">
+                    UseReducer
+                  </Link>
+                </li>
               </ul>
               <button onClick={Logout}>Logout</button>
             </div>

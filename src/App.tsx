@@ -11,6 +11,7 @@ import StepB from './pages/StepB';
 import NoPage from './pages/NoPage';
 import Login from './pages/Login';
 import UseRef from './pages/UseRef';
+import UseReducer from './pages/UseReducer';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="DropDownList" element={<StepB />} />
             <Route path="*" element={<NoPage />} />
             <Route path="UseRef" element={<UseRef />} />
+            <Route path="UseReducer" element={<UseReducer />} />
           </Route>
           <Route path="Logout" element={<Login />} />
         </Routes>
