@@ -2,7 +2,6 @@ import * as React from 'react';
 
 export default function UseRef() {
   const [user, setUser] = React.useState({ name: '', age: 18 });
-
   const oldUser = React.useRef({ name: 'nxg', age: 18 });
 
   React.useEffect(() => {});
