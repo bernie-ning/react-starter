@@ -1,23 +1,47 @@
 import * as React from 'react';
 
 export default function UseRef() {
-  const [name, setName] = React.useState('');
-  const count = React.useRef(0);
+  const [user, setUser] = React.useState({ name: '', age: 18 });
 
-  React.useEffect(() => {
-    count.current += 1;
-  });
+  const oldUser = React.useRef({ name: 'nxg', age: 18 });
+
+  React.useEffect(() => {});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setUser((values) => {
+      return { ...values, [name]: value };
+    });
+  };
 
   return (
     <>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      <h3>{count.current}</h3>
+      <div>
+        name:
+        <input
+          name="name"
+          type="text"
+          value={user.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        age:
+        <input
+          name="age"
+          type="number"
+          value={user.age}
+          onChange={handleChange}
+        />
+      </div>
+      <h3>
+        new user: name:{user.name} age:{user.age}
+      </h3>
+      <h3>
+        old user: name:{oldUser.current.name} age:{oldUser.current.age}
+      </h3>
     </>
   );
 }
