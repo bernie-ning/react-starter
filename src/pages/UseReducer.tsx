@@ -14,6 +14,7 @@ const initialTodos = [
 ];
 
 const reducer = (state, action) => {
+  console.log(action);
   switch (action.type) {
     case 'COMPLETE':
       return state.map((todo) => {
@@ -49,14 +50,30 @@ export default function UseReducer() {
     console.log(todo);
     console.log(event.target.checked);
     if (event.target.checked) {
-      dispatch({ type: 'COMPLETE', id: todo.id });
+      dispatch({ type: 'COMPLETE', id: todo.id, state: 'checked' });
     } else {
-      dispatch({ type: 'NOT COMPLETE', id: todo.id });
+      dispatch({ type: 'NOT COMPLETE', id: todo.id, state: 'not checked' });
     }
   };
 
   return (
     <>
+      <p>
+        <b>[newState, dispatch] React.useReducer(reducer,initialState)</b>
+        <ol>
+          <li>
+            reducer is a function reference, its define is{' '}
+            <code>reducer(oldState,actionObject)</code> it is used to change the{' '}
+            <b>state</b> by <b>action</b>, and returns the updated state
+          </li>
+          <li>initialState is the initial state</li>
+
+          <li>newState is the updated state</li>
+
+          <li>dispatch is callback to trigger the reducer method</li>
+        </ol>
+      </p>
+
       {todos.map((todo) => (
         <div key={todo.id}>
           <label>
