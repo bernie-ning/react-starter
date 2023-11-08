@@ -38,12 +38,12 @@ export default function Layout() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/StepA">
+                  <Link className="nav-link" to="/Form">
                     UseState-Form
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/StepB">
+                  <Link className="nav-link" to="/DropDownList">
                     UseEffect
                   </Link>
                 </li>

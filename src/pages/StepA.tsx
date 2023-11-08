@@ -60,7 +60,7 @@ export default function StepA() {
               className="form-check-inline"
               value="man"
               name="gender"
-              onClick={handleChange}
+              onChange={handleChange}
               checked={user.gender === 'man'}
             />
             Man
@@ -73,7 +73,7 @@ export default function StepA() {
               value="female"
               name="gender"
               style={{ marginLeft: '25px' }}
-              onClick={handleChange}
+              onChange={handleChange}
               checked={user.gender === 'female'}
             />
             Female

@@ -22,9 +22,9 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="Form" element={<StepA />} />
             <Route path="DropDownList" element={<StepB />} />
-            <Route path="*" element={<NoPage />} />
             <Route path="UseRef" element={<UseRef />} />
             <Route path="UseReducer" element={<UseReducer />} />
+            <Route path="*" element={<NoPage />} />
           </Route>
           <Route path="Logout" element={<Login />} />
         </Routes>
