@@ -12,6 +12,7 @@ import NoPage from './pages/NoPage';
 import Login from './pages/Login';
 import UseRef from './pages/UseRef';
 import UseReducer from './pages/UseReducer';
+import UseCallback from './pages/UseCallback';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="DropDownList" element={<StepB />} />
             <Route path="UseRef" element={<UseRef />} />
             <Route path="UseReducer" element={<UseReducer />} />
+            <Route path="UseCallback" element={<UseCallback />} />
             <Route path="*" element={<NoPage />} />
           </Route>
           <Route path="Logout" element={<Login />} />

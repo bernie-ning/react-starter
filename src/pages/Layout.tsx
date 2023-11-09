@@ -57,6 +57,11 @@ export default function Layout() {
                     UseReducer
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/UseCallback">
+                    UseCallback
+                  </Link>
+                </li>
               </ul>
               <button onClick={Logout}>Logout</button>
             </div>
